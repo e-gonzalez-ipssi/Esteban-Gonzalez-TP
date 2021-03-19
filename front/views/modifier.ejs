@@ -5,35 +5,32 @@
 <h1>Modifier une Annonce</h1>
 
 <form>
-  <label for="titre">Titre :</label>
-  <input type="text" id="titre" value="<%= annonce.titre %>">
-
-  </br>
-
-  <label for="description">Description :</label>
-  <input type="text" id="description" value="<%= annonce.description %>">
-
-  </br>
-  
-  <label for="adresse">Adresse :</label>
-  <input type="text" id="adresse" value="<%= annonce.adresse %>">
-  
-  </br>
-
-  <label for="code_postal">Code postal :</label>
-  <input type="text" id="code_postal" value="<%= annonce.code_postal %>">
-
-  </br>
-  
-  <label for="ville">Ville :</label>
-  <input type="text" id="ville" value="<%= annonce.ville %>">
-
-  </br>
-
-  <label for="prix">Prix :</label>
-  <input type="text" id="prix" value="<%= annonce.prix %>">
-
-  </br>
+  <table>
+    <tr>
+      <td><label for="titre">Titre :</label></td>
+      <td><input type="text" id="titre" value="<%= annonce.titre %>"></td>
+    </tr>
+    <tr>
+      <td><label for="description">Description :</label></td>
+      <td><input type="text" id="description" value="<%= annonce.description %>"></td>
+    </tr>
+    <tr>
+      <td><label for="adresse">Adresse :</label></td>
+      <td><input type="text" id="adresse" value="<%= annonce.adresse %>"></td>
+    </tr>
+    <tr>
+      <td><label for="code_postal">Code postal :</label></td>
+      <td><input type="text" id="code_postal" value="<%= annonce.code_postal %>"></td>
+    </tr>
+    <tr>
+      <td><label for="ville">Ville :</label></td>
+      <td><input type="text" id="ville" value="<%= annonce.ville %>"></td>
+    </tr>
+    <tr>
+      <td><label for="prix">Prix :</label></td>
+      <td><input type="text" id="prix" value="<%= annonce.prix %>"></td>
+    </tr>
+  </table>
 
   <button type="submit" onclick="changeAnnonce('<%= annonce._id %>')">Confirmer</button>
 </form>

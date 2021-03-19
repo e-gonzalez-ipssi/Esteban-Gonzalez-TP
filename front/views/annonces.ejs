@@ -4,13 +4,35 @@
 
 <h1>Annonces</h1>
 
-<ul>
+<table>
+  <tr>
+    <td>Code</td>
+    <td>Titre</td>
+    <td>Description</td>
+    <td>Adresse</td>
+    <td>Code Postal</td>
+    <td>Ville</td>
+    <td>Prix</td>
+  </tr>
   <% annonces.forEach((annonce) => { %>
-    <li>
-      <a href="http://localhost:4000/annonce/<%= annonce._id %>">
-        <%= annonce.titre %>
-      </a>
-      <button type="button" onclick="deleteAnnonce('<%= annonce._id %>')">Supprimer</button>
-    </li>
+    <tr>
+      <td>
+        <a href="http://localhost:4000/annonce/<%= annonce._id %>">
+        <%= annonce._id %>
+        </a>
+      </td>
+      <td><%= annonce.titre %></td>
+      <td><%= annonce.description %></td>
+      <td><%= annonce.adresse %></td>
+      <td><%= annonce.code_postal %></td>
+      <td><%= annonce.ville %></td>
+      <td><%= annonce.prix %></td>
+      <td><button type="button" onclick="deleteAnnonce('<%= annonce._id %>')">Supprimer</button></td>
+      <td>
+        <a href="http://localhost:4000/modifier/<%= annonce._id %>">
+          Modifier
+        </a>
+      </td>
+    </tr>
   <% }) %>
-</ul>
+</table>

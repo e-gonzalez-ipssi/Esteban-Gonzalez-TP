@@ -1,0 +1,18 @@
+<%- include('partials/head') %>
+
+<%- include('header') %>
+
+<h1><%= annonce.titre %></h1>
+<h2><%= annonce.description %></h2>
+<h2><%= annonce.adresse %></h2>
+<h2><%= annonce.code_postal %></h2>
+<h2><%= annonce.ville %></h2>
+<h2><%= annonce.prix %></h2>
+
+<code><%= annonce._id %></code>
+
+</br>
+<a href="http://localhost:4000/modifier/<%= annonce._id %>">
+    Modifier L'annonce
+</a>
+
